@@ -39,7 +39,7 @@ public class MyStompClient {
         stompClient.setMessageConverter(new MappingJackson2MessageConverter());//轉換成json格式
 
         StompSessionHandler sessionHandler = new MyStompSessionHandler(messageListener,username);
-        String url = "ws://localhost:8080/ws";//給websocket
+        String url = "https://chat-app-0yb2.onrender.com/ws";//給websocket
 
         session = stompClient.connectAsync(url,sessionHandler).get();
     }
